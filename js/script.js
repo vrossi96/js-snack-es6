@@ -24,7 +24,8 @@ const objNewValue = (array, newValue) => {
    }
 }
 
-
+const containerOne = document.getElementById('es-1-container');
+const containerTwo = document.getElementById('es-2-container');
 //# ESERCIZIO 1
 // Creo array di biciclette (oggetti)
 const biciclette = [
@@ -35,14 +36,6 @@ const biciclette = [
 ];
 // console.table(biciclette);
 
-/* for (let i = 0; i < biciclette.length; i++) {
-   const bicicletta = biciclette[i];
-   for (let key in bicicletta) {
-      if (key == 'peso'){
-         bicicletta.peso = getRandomNumber(3, 39);
-      }
-   }
-} */
 objNewValue(biciclette, 'peso')
 console.table(biciclette);
 
@@ -55,7 +48,10 @@ for (let i = 0; i < biciclette.length; i++){
 }
 // Math min prende il numero più basso nell'array
 const minWeight = Math.min(...pesi);
+const showOne = document.createElement('h3');
 console.log('Peso minore:', minWeight, 'KG');
+showOne.append(`Il peso più basso delle biciclette è: ${minWeight}`);
+containerOne.appendChild(showOne);
 
 
 //# ESERCIZIO 2
@@ -100,9 +96,13 @@ console.table(teams);
 
 const teamsDetails = [];
 for (let i = 0; i < teams.length; i++){
+   const list = document.createElement('li')
    const team = teams[i];
    const {teamName, foulAgainst} = team;
-
+   
+   list.append(`${teamName}: ${foulAgainst} Falli subiti`);
+   containerTwo.appendChild(list);
+   
    teamsDetails.push(teamName, foulAgainst);
 }
 console.table(teamsDetails);
