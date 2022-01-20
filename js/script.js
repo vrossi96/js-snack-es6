@@ -2,7 +2,7 @@
 Snack 1
 Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
-Stampare ain console la bici con peso minore utilizzando destructuring e template literal
+Stampare in console la bici con peso minore utilizzando destructuring e template literal
 
 
 Snack2
@@ -16,3 +16,23 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
 BONUS
 Stampare in pagina oltre che in console!
 */
+
+//# ESERCIZIO 1
+// Creo array di biciclette (oggetti)
+const biciclette = [
+   {nome: 'Graziella', peso: 30},
+   {nome: 'Marinella',peso: 24},
+   {nome: 'Marachella',peso: 21},
+];
+
+
+
+
+
+
+
+
+
+
+
+//# ESERCIZIO 2
