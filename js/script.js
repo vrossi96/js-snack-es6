@@ -43,7 +43,7 @@ console.table(biciclette);
 const pesi = [];
 for (let i = 0; i < biciclette.length; i++){
    const bicicletta = biciclette[i];
-   const peso = bicicletta.peso;
+   const {peso} = bicicletta;
    pesi.push(peso);
 }
 // Math min prende il numero più basso nell'array
