@@ -74,7 +74,7 @@ for (let i = 0; i < teams.length; i++) {
    const team = teams[i];
    for (let key in team) {
       if (key == 'teamName'){
-         team.teamName = prompt(`Inserisci il nome della ${i +1} squadra:`);
+         team.teamName = prompt(`Inserisci il nome della ${i +1} squadra:`,'FC Goto');
       }
       if (key == 'points'){
          team.points = getRandomNumber(1, 45);
@@ -84,5 +84,14 @@ for (let i = 0; i < teams.length; i++) {
       }
    }
 }
-
 console.table(teams);
+
+const teamsDetails = [];
+for (let i = 0; i < teams.length; i++){
+   const team = teams[i];
+   const teamNameArray = team.teamName;
+   const teamFoulArray = team.foulAgainst;
+   
+   teamsDetails.push(teamNameArray, teamFoulArray);
+}
+console.table(teamsDetails);
