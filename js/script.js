@@ -13,6 +13,17 @@ const getRandomNumber = (min, max) => {
    return randomNumber;
 }
 
+const objNewValue = (array, newValue) => {
+   for (let i = 0; i < array.length; i++) {
+      const object = array[i];
+      for (let key in object) {
+         if (key == newValue){
+            object[newValue] = getRandomNumber(3, 39);
+         }
+      }
+   }
+}
+
 
 //# ESERCIZIO 1
 // Creo array di biciclette (oggetti)
@@ -24,14 +35,15 @@ const biciclette = [
 ];
 // console.table(biciclette);
 
-for (let i = 0; i < biciclette.length; i++) {
+/* for (let i = 0; i < biciclette.length; i++) {
    const bicicletta = biciclette[i];
    for (let key in bicicletta) {
       if (key == 'peso'){
          bicicletta.peso = getRandomNumber(3, 39);
       }
    }
-}
+} */
+objNewValue(biciclette, 'peso')
 console.table(biciclette);
 
 // Creo Array vuoto per i pesi
@@ -89,9 +101,8 @@ console.table(teams);
 const teamsDetails = [];
 for (let i = 0; i < teams.length; i++){
    const team = teams[i];
-   const teamNameArray = team.teamName;
-   const teamFoulArray = team.foulAgainst;
-   
-   teamsDetails.push(teamNameArray, teamFoulArray);
+   const {teamName, foulAgainst} = team;
+
+   teamsDetails.push(teamName, foulAgainst);
 }
 console.table(teamsDetails);
