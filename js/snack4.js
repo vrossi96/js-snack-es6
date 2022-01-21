@@ -60,3 +60,7 @@ const studentClass = [
       sumOfVotes: "64",
    },
 ];
+
+const higherVotes = studentClass.filter(({ sumOfVotes }) => sumOfVotes > 70);
+
+console.table(higherVotes);
