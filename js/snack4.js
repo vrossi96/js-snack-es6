@@ -41,7 +41,7 @@ const studentClass = [
    },
    {
       name: "Luigi",
-      id: "Sbel",
+      id: "118",
       sumOfVotes: "83",
    },
    {
@@ -64,3 +64,9 @@ const studentClass = [
 const higherVotes = studentClass.filter(({ sumOfVotes }) => sumOfVotes > 70);
 
 console.table(higherVotes);
+
+const higVotesAndId = studentClass.filter(
+   ({ sumOfVotes, id }) => sumOfVotes > 70 && id > 120
+);
+
+console.table(higVotesAndId);
