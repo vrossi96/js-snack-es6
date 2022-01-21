@@ -80,7 +80,6 @@ const nameStudents = studentClass.map(({ name }) => {
    for (let i = 0; i < word.length; i++) {
       let words =
          word[i].charAt(0).toUpperCase() + word[i].slice(1).toLowerCase();
-      // return word[].toUpperCase() + name.substring(1);
       moreWords += " " + words;
    }
    return moreWords;
